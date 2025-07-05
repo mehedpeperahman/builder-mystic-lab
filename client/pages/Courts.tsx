@@ -11,6 +11,7 @@ import {
   Calendar,
   Clock,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Courts() {
   const courts = [
@@ -72,15 +73,15 @@ export default function Courts() {
             <span className="text-xl font-bold text-primary">FutsalPro</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="text-foreground hover:text-primary transition-colors"
             >
               Home
-            </a>
-            <a href="/courts" className="text-primary font-medium">
+            </Link>
+            <Link to="/courts" className="text-primary font-medium">
               Courts
-            </a>
+            </Link>
             <a
               href="#"
               className="text-foreground hover:text-primary transition-colors"
