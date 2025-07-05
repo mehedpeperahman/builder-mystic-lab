@@ -14,6 +14,12 @@ export default {
     },
     extend: {
       colors: {
+        futsal: {
+          green: "hsl(142, 72%, 29%)",
+          blue: "hsl(197, 75%, 50%)",
+          light: "hsl(142, 72%, 95%)",
+          dark: "hsl(142, 72%, 15%)",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
