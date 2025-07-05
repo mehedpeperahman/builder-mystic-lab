@@ -142,7 +142,10 @@ export default function Index() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary to-accent text-white py-20 lg:py-32">
+      <section
+        className="relative text-white py-20 lg:py-32"
+        style={{ backgroundColor: "#FF0000" }}
+      >
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
