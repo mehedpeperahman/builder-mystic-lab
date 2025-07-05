@@ -19,6 +19,7 @@ import {
   Zap,
 } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Index() {
   const [selectedDate, setSelectedDate] = useState("");
@@ -108,12 +109,12 @@ export default function Index() {
             <span className="text-xl font-bold text-primary">FutsalPro</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
-            <a
-              href="#"
+            <Link
+              to="/courts"
               className="text-foreground hover:text-primary transition-colors"
             >
               Courts
-            </a>
+            </Link>
             <a
               href="#"
               className="text-foreground hover:text-primary transition-colors"
@@ -154,12 +155,15 @@ export default function Index() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
+                asChild
                 size="lg"
                 variant="secondary"
                 className="text-lg px-8 py-3"
               >
-                <MapPin className="w-5 h-5 mr-2" />
-                Find Courts Near Me
+                <Link to="/courts">
+                  <MapPin className="w-5 h-5 mr-2" />
+                  Find Courts Near Me
+                </Link>
               </Button>
               <Button
                 size="lg"
@@ -213,7 +217,9 @@ export default function Index() {
                   </select>
                 </div>
                 <div className="flex items-end">
-                  <Button className="w-full h-10">Search Courts</Button>
+                  <Button asChild className="w-full h-10">
+                    <Link to="/courts">Search Courts</Link>
+                  </Button>
                 </div>
               </div>
             </Card>
@@ -348,9 +354,16 @@ export default function Index() {
               <Calendar className="w-5 h-5 mr-2" />
               Book Your First Court
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-3">
-              <Clock className="w-5 h-5 mr-2" />
-              View All Courts
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="text-lg px-8 py-3"
+            >
+              <Link to="/courts">
+                <Clock className="w-5 h-5 mr-2" />
+                View All Courts
+              </Link>
             </Button>
           </div>
         </div>
